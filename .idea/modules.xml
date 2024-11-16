@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DIU_Bus_Tracking.iml" filepath="$PROJECT_DIR$/.idea/modules/DIU_Bus_Tracking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DIU_Bus_Tracking.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DIU_Bus_Tracking.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DIU_Bus_Tracking.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DIU_Bus_Tracking.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DIU_Bus_Tracking.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DIU_Bus_Tracking.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DIU_Bus_Tracking.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DIU_Bus_Tracking.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
