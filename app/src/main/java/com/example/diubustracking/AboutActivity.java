@@ -14,7 +14,7 @@ public class AboutActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("About DBTS");
+        toolbar.setTitle("DIU BUS");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white,getTheme()));
         setSupportActionBar(toolbar);
         getWindow().setStatusBarColor(getResources().getColor(R.color.darkblue2, this.getTheme()));

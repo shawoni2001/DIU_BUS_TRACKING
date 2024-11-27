@@ -39,8 +39,24 @@ public class DriverLoginActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                //todo
-                // shawoni
+                Intent intent = new Intent(DriverLoginActivity.this, DriverLocationActivity.class);
+
+                name = mMemberName.getText().toString();
+                phone = mPhoneNumber.getText().toString();
+                licence_no = mLicenceNo.getText().toString();
+                email = mEmail.getText().toString();
+
+                if(TextUtils.isEmpty(name))
+                    mMemberName.setError("Name is Mandatory");
+                if(TextUtils.isEmpty(phone))
+                    mPhoneNumber.setError("Phone No. is Mandatory");
+                if(TextUtils.isEmpty(licence_no))
+                    mLicenceNo.setError("Licence No. is Mandatory");
+                if(!(TextUtils.isEmpty(name) && TextUtils.isEmpty(phone) && TextUtils.isEmpty(licence_no)))
+                {
+                    mDatabaseHelper .insertData(name, phone, licence_no, email);               // Insert data into SqLite Database
+                    startActivity(intent);
+                }
             }
         });
 

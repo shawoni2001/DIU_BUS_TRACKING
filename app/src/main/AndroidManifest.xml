@@ -30,10 +30,10 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name="com.example.diubustracking.MainActivity"/>
-        <activity android:name="com.example.diubustracking.StudentTrackerActivity" />
         <activity android:name="com.example.diubustracking.DriverLoginActivity" />
-        <activity android:name="com.example.diubustracking.DriverTrackingActivity" />
         <activity android:name="com.example.diubustracking.AboutActivity" />
+        <activity android:name="com.example.diubustracking.DriverLocationActivity"/>
+        <activity android:name="com.example.diubustracking.StudentLocationActivity"/>
         <activity android:name="com.example.diubustracking.Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

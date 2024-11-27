@@ -40,9 +40,8 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                //TODO: Shawoni
-                //Intent intent = new Intent(MainActivity.this, StudentTrackerActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,StudentLocationActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -50,9 +49,7 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle("DIU Bus Tracker");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white,getTheme()));
         setSupportActionBar(toolbar);
-
         getWindow().setStatusBarColor(getResources().getColor(R.color.darkblue2, this.getTheme()));
-       // getWindow().setNavigationBarColor(getResources().getColor(R.color.yellow,this.getTheme()));
     }
 
     @Override
