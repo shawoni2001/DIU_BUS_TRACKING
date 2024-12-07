@@ -34,6 +34,8 @@
         <activity android:name="com.example.diubustracking.AboutActivity" />
         <activity android:name="com.example.diubustracking.DriverLocationActivity"/>
         <activity android:name="com.example.diubustracking.StudentLocationActivity"/>
+        <activity android:name="com.example.diubustracking.StudentRegistrationActivity"/>
+        <activity android:name="com.example.diubustracking.StudentLoginActivity"/>
         <activity android:name="com.example.diubustracking.Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

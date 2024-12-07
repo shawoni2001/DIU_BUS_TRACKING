@@ -14,7 +14,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button driver,student;
+    Button driver,student,studentLogin;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -24,7 +24,17 @@ public class MainActivity extends AppCompatActivity
 
         driver = findViewById(R.id.driver);
         student = findViewById(R.id.student);
+        studentLogin = findViewById(R.id.studentLogin);
 
+        studentLogin.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(MainActivity.this, StudentLoginActivity.class);
+                startActivity(intent);
+            }
+        });
         driver.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -40,7 +50,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(MainActivity.this,StudentLocationActivity.class);
+                Intent intent = new Intent(MainActivity.this,StudentRegistrationActivity.class);
                 startActivity(intent);
             }
         });

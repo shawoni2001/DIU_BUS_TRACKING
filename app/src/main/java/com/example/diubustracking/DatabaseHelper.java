@@ -58,4 +58,12 @@ public class DatabaseHelper extends SQLiteOpenHelper
         Cursor  cursor = writableDatabase.rawQuery(query,null);
         return cursor;
     }
+
+    public Cursor getPasswordData(String id)
+    {
+        SQLiteDatabase writableDatabase = this.getWritableDatabase();
+        String query="SELECT * FROM "+TABLE_NAME+" WHERE phone='"+id+"'";
+        Cursor  cursor = writableDatabase.rawQuery(query,null);
+        return cursor;
+    }
 }

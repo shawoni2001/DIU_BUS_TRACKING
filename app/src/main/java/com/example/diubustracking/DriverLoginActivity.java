@@ -17,7 +17,7 @@ public class DriverLoginActivity extends AppCompatActivity
 {
     EditText mLicenceNo, mMemberName, mPhoneNumber, mEmail;
     Button mLoginButton;
-    String licence_no,name,phone,email;
+    String licence_no, name, phone, email;
     DatabaseHelper mDatabaseHelper;
 
     @Override
