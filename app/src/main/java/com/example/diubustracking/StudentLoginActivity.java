@@ -56,6 +56,8 @@ public class StudentLoginActivity extends AppCompatActivity
                     if(data.equals(password)){
                         Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
                         startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Wrong student info/password",Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -63,7 +65,7 @@ public class StudentLoginActivity extends AppCompatActivity
         }
         );
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Driver Register");
+        toolbar.setTitle("Student Login");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white,getTheme()));
         setSupportActionBar(toolbar);
 

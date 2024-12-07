@@ -71,8 +71,23 @@ public class DriverLocationActivity extends AppCompatActivity implements OnMapRe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.driver_tracklocation);
 
-        database = FirebaseDatabase.getInstance();  // returns an object of firebase database
+        database = FirebaseDatabase.getInstance("https://diubustracker-9e751.firebaseio.com");  // returns an object of firebase database
+        final DatabaseReference myRef = database.getReference("messages");
 
+        // Push data to Firebase
+        myRef.setValue("Hello, Firebase!").addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(Task<Void> task)
+            {
+                if (task.isSuccessful())
+                {
+                    Log.d("TAG", "Data pushed successfully");
+                } else
+                {
+                    Log.e("TAG", "Failed to push data", task.getException());
+                }
+            }
+        });
         databaseHelper = new DatabaseHelper(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -242,6 +257,26 @@ public class DriverLocationActivity extends AppCompatActivity implements OnMapRe
 
                 if(route_selected)
                 {
+                    database = FirebaseDatabase.getInstance("https://diubustracker-9e751.firebaseio.com");  // returns an object of firebase database
+                    final DatabaseReference myRef = database.getReference("messages");
+
+                    // Push data to Firebase
+                    myRef.setValue("Hello, Firebase!").addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(Task<Void> task)
+                        {
+                            if (task.isSuccessful())
+                            {
+                                Log.d("TAG", "Data pushed successfully");
+                            } else
+                            {
+                                Log.e("TAG", "Failed to push data", task.getException());
+                            }
+                        }
+                    });
+
+
+
                     Toast.makeText(DriverLocationActivity.this, "Location Sent : " + location.getLatitude() + "   " + location.getLongitude(), Toast.LENGTH_LONG).show();
 
                     final DatabaseReference reference = database.getReference();      //return the path to the root

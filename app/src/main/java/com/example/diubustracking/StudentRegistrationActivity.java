@@ -69,7 +69,7 @@ public class StudentRegistrationActivity extends AppCompatActivity
         }
         );
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Driver Register");
+        toolbar.setTitle("Student Register");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white,getTheme()));
         setSupportActionBar(toolbar);
 

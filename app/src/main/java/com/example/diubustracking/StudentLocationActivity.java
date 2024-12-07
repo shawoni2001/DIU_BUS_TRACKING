@@ -50,6 +50,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,7 +76,31 @@ public class StudentLocationActivity extends AppCompatActivity implements OnMapR
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_tracklocation);
 
-        database = FirebaseDatabase.getInstance();  // returns an object of firebase database
+        // Initialize Firebase Database
+        database = FirebaseDatabase.getInstance("https://diubustracker-9e751.firebaseio.com");  // returns an object of firebase database
+        final DatabaseReference myRef = database.getReference("messages");
+
+        // Fetch data from Firebase
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Get the data as a String
+                String value = dataSnapshot.getValue(String.class);
+                Log.d("TAG", "Fetched value: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Log the error
+                Log.e("TAG", "Failed to fetch data", error.toException());
+            }
+        });
+
+
+
+
+
+       /// database = FirebaseDatabase.getInstance();  // returns an object of firebase database
 
         //licence_no = getIntent().getStringExtra("licence_no");
 
